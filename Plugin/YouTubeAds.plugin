@@ -1,14 +1,14 @@
-#!name=Block YouTube Advertising
-#!desc=仅用于视频广告
-#!name= 插件名称
-#!desc= 插件详细功能描述
-#!author= 插件作者
-#!homepage= 插件首页，可在插件页面进行跳转
-#!icon= 插件的图标
+#!name= Block YouTube Advertising
+#!desc= 仅用于视频
+#!openUrl= https://github.com/DivineEngine/Profiles/tree/master
+#!author= ConnersHua
+#!homepage= https://github.com/DivineEngine/Profiles/tree/master
+#!icon= https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
+
 [Rule]
 AND,((PROTOCOL,UDP),(DEST-PORT,443)),REJECT-NO-DROP
 
-[rewrite]
+[Rewrite]
 (^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) $1$2$3 header
 ^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad - reject
 
