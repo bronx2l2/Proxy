@@ -5,9 +5,6 @@
 #!homepage= https://github.com/DivineEngine/Profiles/tree/master
 #!icon= https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
 
-[Rule]
-AND,((PROTOCOL,UDP),(DEST-PORT,443)),REJECT-NO-DROP
-
 [Rewrite]
 (^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) $1$2$3 header
 ^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad - reject
